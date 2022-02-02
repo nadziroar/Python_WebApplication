@@ -23,6 +23,7 @@ class StudentInfo (models.Model):
     gender = ('M' , 'Male') , ('F' , 'Female')
     student_class = models.ForeignKey(StudentClass ,on_delete=models.CASCADE)
     status = (1 , 'Registered') ,  (2 , 'Accepted') , ( 3 , 'Probation') , (4 , 'LOA') ,(5 , 'Graduated') , (6, 'Expelled')
+    date_added = models.DateTimeField(auto_now_add = True)
     
     def __str__(self):
         #To display Student Info
