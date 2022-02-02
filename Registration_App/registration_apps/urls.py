@@ -9,6 +9,6 @@ urlpatterns = [
     #Home Page : 
     path('' , views.index , name = 'index'),
     #Page that shows all students 
-    path('students/' , views.students_info , name= 'students'),
+    path('students/' , views.students , name= 'students'),
     
 ]

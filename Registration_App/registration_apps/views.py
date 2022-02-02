@@ -1,6 +1,5 @@
 from django.shortcuts import render
-
-from Registration_App.registration_apps.models import StudentInfo
+from .models import StudentInfo
 
 # Create your views here.
 def index(request):
