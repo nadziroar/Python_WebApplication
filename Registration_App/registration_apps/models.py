@@ -25,6 +25,9 @@ class StudentInfo (models.Model):
     status = (1 , 'Registered') ,  (2 , 'Accepted') , ( 3 , 'Probation') , (4 , 'LOA') ,(5 , 'Graduated') , (6, 'Expelled')
     date_added = models.DateTimeField(auto_now_add = True)
     
+    class Meta:
+        verbose_name_plural =  'students'
+    
     def __str__(self):
         #To display Student Info
         student_info = f"Student ID : {self.id} Student Name : {self.first_name}"
