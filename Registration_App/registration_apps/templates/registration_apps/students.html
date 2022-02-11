@@ -3,8 +3,8 @@
 {% block content %}
     <p> Student Info</p>
     <ul>
-        {% for student in Students  %}
-            <li>{{topic}}</li>
+        {% for student in StudentInfo  %}
+            <li>{{student}}</li>
         {% empty %}
             <li>No students have been added yet </li>
         {% endfor %}
