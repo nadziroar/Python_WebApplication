@@ -28,4 +28,11 @@ class Student (models.Model):
     studentClass = models.ForeignKey (StudentClass , on_delete= models.CASCADE)
     studentRegisterDate = models.DateTimeField (auto_now_add= True)
     studentEmail = models.CharField(unique = True , max_length= 300)
-    studentStatus = ()
+    studentStatus = [
+        (1 , 'Registered'),
+        (2 , 'Active'),
+        (3 , 'On Probation') , 
+        (4 , 'Graduated') , 
+        (0 , 'Expelled'), 
+    ]
+    
