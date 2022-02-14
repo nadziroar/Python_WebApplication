@@ -9,5 +9,7 @@ def index(request):
 
 def student_class(request):
     """Show all student classes"""
-    studen
+    className = StudentClass.objects.order_by('createdDate')
+    context = {'classes' : className}
+    return render(request, 'learning_logs/className.html' , context)
 
