@@ -1,0 +1,13 @@
+{% extends 'learning_logs/base.html' %}
+
+{% block content %}
+    <p>Classes </p>
+
+    <ul>
+        {% for sclass in student_class  %}
+            <li>{{ sclass }} </li>
+        {% empty %}
+            <li> No classes have been added yet </li>
+        {% endfor %}
+    </ul>
+{% endblock content %}

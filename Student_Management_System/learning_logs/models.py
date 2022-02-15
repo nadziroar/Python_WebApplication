@@ -16,23 +16,9 @@ class StudentClass(models.Model):
     
     #This is to return classname with current capacity
     def __str__(self):
-        return self.className + ' Current Capacity : ' + str(self.classCurrentCapacity) + '/' + str(self.classMaxCapacity)
+        return self.className + ' Current Capacity : ' + str(self.classCurrentCapacity) + '/' + str(self.classMaxCapacity) 
     
  
     
-class Student (models.Model):
-    #CLASS MODEL FOR STUDENT_INFORMATION
-    studentID = models.IntegerField(primary_key= True)
-    studentFirstName = models.CharField(max_length= 300)
-    studentLastName = models.CharField (max_length= 300)
-    studentClass = models.ForeignKey (StudentClass , on_delete= models.CASCADE)
-    studentRegisterDate = models.DateTimeField (auto_now_add= True)
-    studentEmail = models.CharField(unique = True , max_length= 300)
-    studentStatus = [
-        (1 , 'Registered'),
-        (2 , 'Active'),
-        (3 , 'On Probation') , 
-        (4 , 'Graduated') , 
-        (0 , 'Expelled'), 
-    ]
+
     
