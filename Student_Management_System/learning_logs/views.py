@@ -1,7 +1,10 @@
 from django.shortcuts import render
+from django.http import HttpResponse
 
 from .models import StudentClass
 
+def testing(request):
+    return HttpResponse("Hello World im testing~")
 # Create your views here.
 def index(request):
     """The home page for learning_logs"""
