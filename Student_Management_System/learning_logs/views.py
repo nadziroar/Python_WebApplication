@@ -12,7 +12,7 @@ def index(request):
 
 def student_class(request):
     """Show all student classes"""
-    className = StudentClass.objects.order_by('className')
+    className = StudentClass.objects.order_by('name')
     context = {'classes' : className}
     return render(request, 'learning_logs/classes.html' , context)
 
