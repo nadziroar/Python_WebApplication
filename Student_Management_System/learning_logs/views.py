@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-from .models import StudentClass
+from .models import ClassInfo
 
 def testing(request):
     return HttpResponse("Hello World im testing~")
@@ -12,7 +12,7 @@ def index(request):
 
 def student_class(request):
     """Show all student classes"""
-    className = StudentClass.objects.order_by('name')
-    context = {'classes' : className}
+    name = ClassInfo.objects.order_by('name')
+    context = {'classes' : name}
     return render(request, 'learning_logs/classes.html' , context)
 

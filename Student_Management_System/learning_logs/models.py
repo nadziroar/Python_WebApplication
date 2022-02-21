@@ -6,7 +6,7 @@ from django.forms import ModelForm
 
 # Create your models here.
 
-class StudentClass(models.Model):
+class ClassInfo(models.Model):
     #Class for student classes
     name  = models.CharField(default= 'Empty Name',  max_length= 50)
     classMaxCapacity = models.IntegerField()
@@ -18,8 +18,20 @@ class StudentClass(models.Model):
         return self.name
     
  
-class StudentClassForm (ModelForm):
-    class Meta:
-        model = StudentClass
-        fields = ['name' , 'title' , 'createddate']
-    
+class Student (models.Model):
+    #Class for Students
+    first_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
+    birth_date  = models.DateField()
+    STATUS = [
+        ('R' , 'Registered'),
+        ('A' , 'Active'),
+        ('P' , 'Probation'),
+        ('E' , 'Expelled'),
+        ('G' , 'Graduated'),
+    ]
+    GENDER = [
+        ('m' , 'Male'),
+        ('f' , 'Female'),
+    ]
+        
